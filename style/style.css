@@ -327,6 +327,63 @@ h1 {
   width: 1200px;
 }
 
+.pict-hover {
+  width: 284px;
+  height: 206px;
+  box-sizing: border-box;
+  border-top: 3px solid #18CFAB;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.icons {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #18CFAB;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  color: #18CFAB;
+  font-size: 22px;
+  margin-top: 38px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.icons:hover {
+  background-color: #18CFAB;
+  color: white;
+  
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.fa-search-location {
+  padding-top: 7px;
+}
+
+.fa-square-root-alt {
+  padding-top: 7px;
+}
+
+.pict-hover-text1 {
+  color: #18CFAB;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 34px;
+  margin-bottom: 13px;
+}
+
+.pict-hover-text2 {
+  font-size: 16px;
+  color: grey;
+}
+
 .load-more {
   padding-bottom: 10px;
 }
@@ -460,7 +517,7 @@ h1 {
   left: -325px;
 }
 
-.hasan {
+.hasan1 {
   padding-top: 43px;
   padding-bottom: 27px;
   color: #18CFAB;
@@ -469,7 +526,7 @@ h1 {
   line-height: 25px;
 }
 
-.hasan>p:nth-child(2) {
+.hasan1>p:nth-child(2) {
   color: #fff;
   font-size: 14px;
   font-weight: 300;
