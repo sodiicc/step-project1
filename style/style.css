@@ -39,6 +39,14 @@ a {
   color: white;
 }
 
+.header-fixed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
 .header-left {
   font-size: 16px;
   padding-bottom: 15px;
@@ -47,6 +55,7 @@ a {
 
 .navigation {
   font-size: 13px;
+  text-transform: uppercase;
 }
 
 .navigation li {
@@ -137,6 +146,10 @@ h1 {
   font-weight: 700;
 }
 
+.blue-button {
+  background-color: #00cbf6;
+}
+
 .flex-div {
   margin: 0 auto;
   display: flex;
@@ -145,6 +158,8 @@ h1 {
   text-align: center;
   align-content: center;
   color: white;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .fa-gem, .fa-hand-pointer, .fa-assistive-listening-systems, .fa-laptop {
@@ -154,18 +169,18 @@ h1 {
 }
 
 .flex-div1, .flex-div3 {
-  background: linear-gradient(to top, #1C2A33 367px, #18CFAB 7px);
+  background: linear-gradient(to top, #1C2A33 343px, #18CFAB 7px);
   flex-grow: 1;
   align-content: center;
   color: #18CFAB;
-  width: 25%;
+  width: 25%;  
 }
 
 .flex-div2, .flex-div4 {
-  background: linear-gradient(to top, #18CFAB 367px, #fff 7px);
+  background: linear-gradient(to top, #18CFAB 343px, #fff 7px);
   flex-grow: 1;
   text-align: center;
-  width: 25%;
+  width: 25%;  
 }
 
 .flex-div p {
@@ -203,12 +218,14 @@ h1 {
 
 .nav-our-services {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
 }
 
-/* .nav-our-services li:hover {
-  background-color: #18cfab;
-} */
+.nav-our-services li {
+  width: calc(1160px/6);
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .triangle {
   width: 20px;
@@ -227,8 +244,9 @@ h1 {
   margin-bottom: 24px;
   padding: 30px;
   padding-bottom: 10px;
-  background-color: #ebf8fd;
+  background-color: #f8fcfe;
   color: black;
+  border: 1px #ebebeb solid;
 }
 
 .text-and-photo {
@@ -312,7 +330,8 @@ h1 {
   cursor: pointer;
   border-top: rgb(255, 255, 255) 3px solid;
   padding: 30px;
-  background-color: aliceblue
+  background-color: aliceblue;
+  border: 1px #ebebeb solid;
 }
 
 #nav-our-work-active {
@@ -324,7 +343,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 1200px;
+  width: 1160px;
 }
 
 .pict-hover {
@@ -355,7 +374,6 @@ h1 {
 .icons:hover {
   background-color: #18CFAB;
   color: white;
-  
 }
 
 .img-wrapper {
@@ -437,15 +455,18 @@ h1 {
   border-right: 2px solid grey;
   padding: 3px 0;
   padding-right: 25px;
+  text-align: left;  
 }
 
 .admin+p {
   display: inline-block;
+  padding-right: 30px;
 }
 
 .news-flex>a>img+p {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 700; 
+  text-align: left;
 }
 
 .data-relative {
@@ -457,6 +478,7 @@ h1 {
   width: 262px;
   overflow: hidden;
 }
+
 
 .data-corner {
   height: 67px;
