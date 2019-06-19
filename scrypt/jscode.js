@@ -17,6 +17,15 @@ for (let i = 0, len = fiddleFotos.length; i < len; i++) {
 
 // ****************************
 
+
+let allGalerea = document.querySelectorAll('.pict img');
+let imgWrapper = document.querySelectorAll('.img-wrapper');
+
+for(let i =12; i<36; i++){
+  imgWrapper[i].classList.add('invisible');
+  allGalerea[i].classList.remove('invisible');
+  }
+
 let loadMore = document.querySelector('.load-more');
 let loading = document.querySelector('.loading');
 let secondBlockPict = document.querySelector('.second-block-pict');
@@ -25,37 +34,7 @@ let skills = document.getElementById('skills')
 let k = 0;
 let pushLoadMore = 0;
 
-function changeValue() {
-  loading.setAttribute('value', +k);
-  loading.getAttribute('value')
-  k += 1;
-}
 
-loadMore.onclick = () => {
-  k = 0;
-  pushLoadMore++;
-  loadMore.classList.add('invisible');
-  loading.classList.remove('invisible');
-  skills.classList.remove('invisible');
-  let timer = setInterval(changeValue, 20);
-  setTimeout(function () {
-    clearInterval(timer);
-    skills.classList.add('invisible');
-    secondBlockPict.classList.remove('invisible');
-    if (pushLoadMore < 2) {
-      loadMore.classList.remove('invisible');
-      loading.classList.add('invisible');
-    } else {
-      thirdBlockPict.classList.remove('invisible');
-    }
-  }, 2100);
-}
-
-// *****************************
-
-
-let allGalerea = document.querySelectorAll('.pict img');
-let imgWrapper = document.querySelectorAll('.img-wrapper');
 let designGalerea = document.querySelectorAll('[name=graphic-design-galerea]');
 let webGalerea = document.querySelectorAll('[name=web-design-galerea]');
 let lendingGalerea = document.querySelectorAll('[name=landing-pages-galerea]');
@@ -65,6 +44,48 @@ let greenLane = '#18CFAB 3px solid'
 let arrNames = [designGalerea, webGalerea, lendingGalerea, wordpressGalerea];
 
 let pictHover = document.querySelector('.pict-hover');
+
+function changeValue() {
+  loading.setAttribute('value', +k);
+  loading.getAttribute('value')
+  
+  k += 1;
+}
+
+
+loadMore.onclick = () => {
+  k = 0;
+  pushLoadMore++; 
+
+  loadMore.classList.add('invisible');
+  loading.classList.remove('invisible');
+  skills.classList.remove('invisible');
+
+  let timer = setInterval(changeValue, 20);
+  setTimeout(function () {
+    clearInterval(timer);
+    skills.classList.add('invisible'); 
+    for(let i =12; i<24; i++){
+      imgWrapper[i].classList.remove('invisible');
+      // allGalerea[i].classList.remove('invisible');
+      }   
+      
+    if (pushLoadMore < 2) {
+      loadMore.classList.remove('invisible');
+      loading.classList.add('invisible');
+    } else {        
+      for(let i =24; i<36; i++){
+        imgWrapper[i].classList.remove('invisible');
+        // allGalerea[i].classList.remove('invisible');
+        }     
+    }
+  }, 2100);
+}
+
+// *****************************
+
+
+
 
 for (let i = 0, len = allGalerea.length; i < len; i++) {
   allGalerea[i].onmouseenter = (() => {
@@ -77,8 +98,6 @@ for (let i = 0, len = allGalerea.length; i < len; i++) {
       el.style.opacity = 1;
     })    
     pictHover.classList.add('invisible');
-    allGalerea[i].classList.remove('invisible');
-
   })
 }
 
@@ -218,8 +237,6 @@ loadMoreGrid.onclick = () => {
 
 let breakingNews = document.querySelectorAll('.data-relative');
 
-
-
 breakingNews.forEach((el) => {
   el.onmouseenter = () => {
     el.children[1].style.color = '#18CFAB';
@@ -230,5 +247,3 @@ breakingNews.forEach((el) => {
     el.children[4].style.backgroundColor = '';
   }
 });
-
-

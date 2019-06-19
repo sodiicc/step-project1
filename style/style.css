@@ -48,7 +48,7 @@ a {
 }
 
 .header-left {
-  font-size: 16px;
+  font-size: 22px;
   padding-bottom: 15px;
   color: white;
 }
@@ -81,9 +81,8 @@ a {
 
 .header-left::before {
   position: relative;
-  right: 10px;
   top: 8px;
-  padding: 30px;
+  padding: 25px;
   overflow: hidden;
   color: aliceblue;
   font-weight: 700;
@@ -150,7 +149,7 @@ h1 {
   background-color: #00cbf6;
 }
 
-.flex-div {
+.squares {
   margin: 0 auto;
   display: flex;
   width: 100vw;
@@ -168,26 +167,26 @@ h1 {
   margin-bottom: 50px;
 }
 
-.flex-div1, .flex-div3 {
+.squares1, .squares3 {
   background: linear-gradient(to top, #1C2A33 343px, #18CFAB 7px);
   flex-grow: 1;
   align-content: center;
   color: #18CFAB;
-  width: 25%;  
+  width: 25%;
 }
 
-.flex-div2, .flex-div4 {
+.squares2, .squares4 {
   background: linear-gradient(to top, #18CFAB 343px, #fff 7px);
   flex-grow: 1;
   text-align: center;
-  width: 25%;  
+  width: 25%;
 }
 
-.flex-div p {
+.squares p {
   padding-bottom: 120px;
 }
 
-.h2 {
+.header-mid-size {
   font-size: 36px;
   margin: 82px;
 }
@@ -240,10 +239,8 @@ h1 {
 .triangle-box {
   cursor: pointer;
   display: inline-block;
-  margin-top: 70px;
   margin-bottom: 24px;
-  padding: 30px;
-  padding-bottom: 10px;
+  padding: 30px 30px 10px 30px;
   background-color: #f8fcfe;
   color: black;
   border: 1px #ebebeb solid;
@@ -269,9 +266,7 @@ h1 {
 }
 
 .install-section {
-  background: url(../img/Sections-background/section-2.jpg);
-  background-position: center;
-  background-attachment: fixed;
+  background: url(../img/Sections-background/section-2.jpg) center fixed;
 }
 
 .ready-install {
@@ -320,6 +315,14 @@ h1 {
   left: -205px;
 }
 
+.solo-button {
+  margin: 0;
+}
+
+.solo-button-bow {
+  margin-bottom: 127px;
+}
+
 .nav-our-work {
   display: flex;
   justify-content: center;
@@ -327,8 +330,7 @@ h1 {
 }
 
 .nav-our-work li {
-  cursor: pointer;
-  border-top: rgb(255, 255, 255) 3px solid;
+  cursor: pointer; 
   padding: 30px;
   background-color: aliceblue;
   border: 1px #ebebeb solid;
@@ -455,7 +457,7 @@ h1 {
   border-right: 2px solid grey;
   padding: 3px 0;
   padding-right: 25px;
-  text-align: left;  
+  text-align: left;
 }
 
 .admin+p {
@@ -465,7 +467,7 @@ h1 {
 
 .news-flex>a>img+p {
   font-size: 18px;
-  font-weight: 700; 
+  font-weight: 700;
   text-align: left;
 }
 
@@ -478,7 +480,6 @@ h1 {
   width: 262px;
   overflow: hidden;
 }
-
 
 .data-corner {
   height: 67px;
@@ -690,8 +691,8 @@ footer {
 .loading {
   text-transform: uppercase;
   display: block;
-  margin: 0 auto;
-  -webkit-appearance: none;
+  margin: 124px auto 0;
+  /* -webkit-appearance: none; */
   appearance: none;
   width: 166px;
   height: 61px;
@@ -735,6 +736,7 @@ footer {
 .triangle-green {
   background-color: #18CFAB;
   color: white;
+  border-color: #18CFAB;
 }
 
 .load-more {
@@ -744,6 +746,23 @@ footer {
 .selected {
   position: relative;
   bottom: 15px;
+  border: #18CFAB 3px solid;
+  animation: jump .6s;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  20% {
+    bottom: -6px;
+  }
+  85% {
+    bottom: 19px;
+  }
+  100% {
+    bottom: 15px;
+  }
 }
 
 /* clearfix */
